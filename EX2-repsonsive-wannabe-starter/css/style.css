@@ -76,9 +76,6 @@ img {
 }
 
 /* LESSONS SECTION */
-.lessons .col {
-    width: 50%;
-}
 
 .lessons .col img {
     height: 200px;
@@ -98,9 +95,6 @@ img {
     color: #232946;
 }
 
-.steps .col {
-    width: calc(100% / 3);
-}
 
 .steps .col img {
     height: 200px;
@@ -127,3 +121,41 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
+@media screen and (min-width: 481px) {
+    .steps .col {
+        width: calc(100% / 3);
+    }
+
+    .lessons .col{
+        width: 50%;
+    }
+
+    /* Ho assegnato le 2 width presenti nello stile css all'interno di una query così che queste regole vengano applicate solamente per dispositivi che vanno dai 481px in poi */
+}
+
+@media  screen and (max-width: 480px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .col {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 50px;
+        width: 300px;
+    }
+
+    .why-us{
+        background-color: #222222;
+        margin-bottom: 0;
+        padding-top: 30px;
+    }
+
+    .steps{
+        margin-bottom: 0;
+    }
+
+    /* Ho dato una width di 300px cosìche il paragrafo risulti stretto come screenshot; ho dato un margin bottom 0 sia a "why us" che "steps" cosìcche non appaia il background blu del body */
+
+}
